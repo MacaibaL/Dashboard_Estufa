@@ -5,18 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- Bootstrap core CSS -->
-  <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="https://getbootstrap.com/docs/4.1/examples/sign-in/signin.css" rel="stylesheet">
-
+  <!-- Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <!-- Estilização -->
   <link rel="stylesheet" href="main.css" class="css">
-  
+
   <title>SENSOR</title>
 </head>
 
@@ -29,12 +25,12 @@
   </nav>
   <p></p>
 
-  <div class="container">
+  <div class="container pt-4">
 
     
     <div class="row">
 
-      <div class="carde mx-auto">
+      <div class="carde mx-auto" onmouseover="temperatura_atual()" >
         <div class="face face1">
           <div class="content">
             <div class="icon">
@@ -44,15 +40,15 @@
         </div>
         <div class="face face2">
           <div class="content">
-            <h3>
-              <a href="https://www.linkedin.com/in/adamdipinto/" target="_blank">_adamdipinto</a>
+            <h3 id="potencia">
+              
             </h3>
             <p>This is where I network and build my professional protfolio.</p>
           </div>
         </div>
       </div>
       
-      <div class="carde mx-auto">
+      <div class="carde mx-auto " onmouseover="umidade_atual()">
         <div class="face face1">
           <div class="content">
             <div class="icon">
@@ -62,15 +58,15 @@
         </div>
         <div class="face face2">
           <div class="content">
-            <h3>
-              <a href="https://twitter.com/AdamDipinto" target="_blank">@AdamDipinto</a>
+            <h3 id="umidade">
+        
             </h3>
             <p>This is where I read news and network with different social groups.</p>
           </div>
         </div>
       </div>
       
-      <div class="carde mx-auto">
+      <div class="carde mx-auto" onmouseover="luminosidade_atual()">
         <div class="face face1">
           <div class="content">
             <div class="icon">
@@ -80,8 +76,8 @@
         </div>
         <div class="face face2">
           <div class="content">
-            <h3>
-              <a href="https://github.com/atom888" target="_blank">atom888</a>
+            <h3 id="luminosidade">
+              
             </h3>
             <p>This is where I share code and work on projects.</p>
           </div>
@@ -90,17 +86,18 @@
 
     </div>
     
-    <div class="row">
-    ola
+    <div class="row mt-4">
+      <div class="mx-auto" id="line_div"></div>
     </div>
     
     <div class="row">
-    hello
+      <div class="mx-auto" id="piechart_div"></div>
+      <div class="mx-auto" id="bar_div"></div>
     </div>
     
-    <div class="row">
+    <div class="row my-4">
       
-      <button type="button" class="btn btn-danger" onclick="teste()" data-toggle="modal" data-target="#valores">Listar Sensores</button>
+      <button type="button" class="btn btn-danger" onclick="teste()" data-toggle="modal" data-target="#valores">Listar Valores</button>
 
       <!-- Modal -->
       <div class="modal fade" id="valores">
@@ -133,10 +130,22 @@
 
   </div>
 
-  <script src="main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+  
+  
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+  
+  <script src="js/ajaxGetPost.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/charts.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  
 </body>
 
 </html>

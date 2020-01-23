@@ -1,8 +1,10 @@
 <?php
 
-include 'conexao.php';
+include '../conexao.php';
 
-$sql = "SELECT * FROM dados";
+$sql = "SELECT Poten2 
+        FROM dados
+        ORDER BY id DESC limit 1";
 $stmt = $PDO->prepare($sql);
 $stmt->execute();
 

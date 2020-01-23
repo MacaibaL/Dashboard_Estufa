@@ -1,3 +1,7 @@
+.container {
+	padding-top: 5% !important;
+}
+
 .carde {
 	position: relative;
 	border-radius: 10px;
@@ -112,4 +116,31 @@ a {
 }
 .carde:nth-child(3) h3 a:hover{
 	color: #4aada9;
+}
+
+.row .btn {
+	position: relative;
+	left: 83%;
+}
+
+#line_div {
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+	width: 1012px;
+	height: 300px;
+}
+
+#piechart_div {
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+	width: 500px;
+	height: 300px;
+}
+
+#bar_div {
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+	width: 500px;
+	height: 300px;
+}
+
+.row:nth-child(2) {
+	margin-bottom: 12%;
 }
