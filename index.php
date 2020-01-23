@@ -34,7 +34,7 @@
         <div class="face face1">
           <div class="content">
             <div class="icon">
-              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <i class="fab fas fa-thermometer" aria-hidden="true"></i>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
             <h3 id="potencia">
               
             </h3>
-            <p>This is where I network and build my professional protfolio.</p>
+            <p>A temperatura influencia o crescimento e o desenvolvimento de todas as plantas.</p>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
         <div class="face face1">
           <div class="content">
             <div class="icon">
-            <i class="fab fa-twitter-square" aria-hidden="true"></i>
+            <i class="fab fas fa-tint" aria-hidden="true"></i>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
             <h3 id="umidade">
         
             </h3>
-            <p>This is where I read news and network with different social groups.</p>
+            <p>A umidade nos indica o teor de agua do solo, que influencia diretamente no crescimento do plantio</p>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
         <div class="face face1">
           <div class="content">
             <div class="icon">
-            <i class="fab fa-github-square" aria-hidden="true"></i>
+            <i class="fab far fa-sun" aria-hidden="true"></i>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
             <h3 id="luminosidade">
               
             </h3>
-            <p>This is where I share code and work on projects.</p>
+            <p> A irradiância é um fator preponderante para o crescimento das plantas e ela é dada pela “quantidade de luz” que incide em uma determinada área por um determinado tempo.</p>
           </div>
         </div>
       </div>
@@ -113,6 +113,8 @@
                   <tr>
                     <th>#</th>
                     <th>Poten</th>
+                    <th>Poten1</th>
+                    <th>Poten2</th>
                     <th>Data</th>
                     <th>Hora</th>
                   </tr>

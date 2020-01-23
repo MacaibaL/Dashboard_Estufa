@@ -16,7 +16,7 @@ function teste(){
         for(var i=0; i<stats.length; i++) {
             console.log(i, stats[i]); // i é o índice, matriz[i] é o valor
 
-            coisa = coisa + '<tr><th scope="row">'+ stats[i].ID +'</th><td>'+ stats[i].Poten +'</td><td>'+ stats[i].Data +'</td><td>' + stats[i].Hora + '</td></tr>'
+            coisa = coisa + '<tr><th scope="row">'+ stats[i].ID +'</th><td>'+ stats[i].Poten + '</th><td>'+ stats[i].Poten1 + '</th><td>'+ stats[i].Poten2 +'</td><td>'+ stats[i].Data +'</td><td>' + stats[i].Hora + '</td></tr>'
 
         }
         
