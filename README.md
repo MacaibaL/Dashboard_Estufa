@@ -11,7 +11,7 @@ Inovação – PIBITI/CNPq
 ## Disciplina de Desenvolvimento WEB
 > O objetivo final da disciplina é desenvolver um ambiente WEB. Como neste projeto especificamente o seu ambiente web já estava desenvolvido (Imagem 1), a proposta sugerida pelo Professor Luis Carlos seria modificar um ambiente para se tornar mais amigavel ao usuario. Resolvemos modificar o *ambiente 2*, que seria apos o longin do usuario.
 
-![Imagem do Hilaris](./imgs/insterface1.png)
+![Imagem do Hilaris](./imgs/Insterface1.png)
 
 ## Tecnologias usadas para a construção do Circuito
 #### Lista de Materias.
@@ -22,17 +22,20 @@ Inovação – PIBITI/CNPq
 * LEDs RGB
 * Arduino
 
-![Imagem do Circuito](./imgs/Circuito1.png)
+![Imagem do Circuito](./imgs/circuito1.png)
 
 ![Imagem do Circuito-Real](./imgs/CircuitoReal.png)
 
-## Nota
+
 >Para o trabalho da disciplina foi realizado apenas um teste inicial com um potenciometro, apos só ocorreu a variação dos dados pelo nosso banco de dados. Como o circuito não é soldado é possivel de falha, podendo atrapalhar a construção do ambiente. Então foi decidido usar essa abordagem. 
+
 
 #### Circuito 
 
 ![Imagem do Teste](./imgs/Potenciometro_led.png)
 
+
+> Para fins de estudos futuros, foi feito um codigo simples e que irá servir como base para qualquer aplicação com ou mais sensores usando *esp e um ambiente web*.
 
 ## Código na IDE do Arduino 
 
@@ -136,4 +139,33 @@ void loop() {
 }
 
 ```
+
+## Ambiente WEB - Dashboard Hilaris
+
+> Como Citado anteriormente o ambiente foi pensado para ser mais intuitivo e agradavel para o usuario. Então a proposta foi colocar cards, tais cards conteriam o ultimo valor lido pelo sensor e teriam icones que representassem cada sensor.
+
+>Para a construção dos Cards, foi utilizado CSS e HTML.
+![Imagem do Dashboard](./imgs/Cards.png)
+
+> Para a criação do grafico fizemos uso de uma ferramena do Google, o 	[Google Charts](https://developers.google.com/chart/interactive/docs), ela já nos gera graficos com os dados que escolhemos. Vale salientar a facilidade para criar um grafico nela é enorme, em sua própria pagina tem um tutorial ensinando a usar.
+
+>Entretanto como queriamos gerar nossos graficos de acordo com os dados do nosso json, tivemos que fazer uso de outro [tutorial](http://webzoon.blogspot.com/2015/04/como-criar-graficos-com-api-do-google.html), tal foi de grande ajuda para finalizar o projeto.
+
+![Imagem dos graficos](./imgs/graficos.png)
+
+#### Tecnologias Utilizadas para a criação.
+* VisualStudio Code 
+* GitHub
+* XAMPP
+* Bootstrap
+
+## Conclusão
+> A experiencia de realizar esse projeto trouxe só feedback positivos, pude conhecer novas tecnologias. Me deparar com desafios, tais como o do grafico, e conseguir superar.Sem contar que o resultado final foi como esperado, toda a interface funcionando.
+
+
+
+
+
+
+
 
